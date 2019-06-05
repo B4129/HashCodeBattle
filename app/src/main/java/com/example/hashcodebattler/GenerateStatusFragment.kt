@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import com.example.hashcodebattler.Character.CharacterFactory
 import com.example.hashcodebattler.Status.IParam
@@ -13,7 +15,6 @@ import com.example.hashcodebattler.hashcode.HashCode
 import kotlinx.android.synthetic.main.fragment_generate_status.*
 
 class GenerateStatusFragment : Fragment() {
-    // TODO: Rename and change types of parameters
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,6 +33,9 @@ class GenerateStatusFragment : Fragment() {
     }
 
     private fun clickGenerateCharacterButton(view: View) {
+        if(button2.visibility == INVISIBLE) {
+            button2.visibility = VISIBLE
+        }
         val hashCodeClass = HashCode()
         val hashCode = hashCodeClass.create()
         val jobNumber = hashCodeClass.generateNumber(hashCode)

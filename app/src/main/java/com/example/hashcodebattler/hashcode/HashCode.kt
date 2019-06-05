@@ -1,5 +1,6 @@
 package com.example.hashcodebattler.hashcode
 
+import android.util.Log
 import java.security.MessageDigest
 import kotlin.random.Random
 
@@ -21,8 +22,6 @@ class HashCode {
     }
 
 
-
-
     fun create(): String {
         return MessageDigest
             .getInstance("SHA-256")
@@ -41,7 +40,6 @@ class HashCode {
 
     fun generateStatus(type: Int, string: String): Int {
         val hashString = cutHashString(type, string)
-
         return generateStatusValue(hashString)
     }
 
