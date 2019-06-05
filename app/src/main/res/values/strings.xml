@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HashCodeBattler</string>
+    <string name="titleName">HashCodeBattler</string>
+    <string name="Start">ゲームスタート</string>
+    <string name="config">config</string>
+    <string name="exit">Exit</string>
+    <string name="rollTheDice">サイコロを振る</string>
+
+    <string name="hitPoint">HP</string>
+    <string name="attack">攻撃力</string>
+    <string name="speed">俊敏</string>
+    <string name="block">防御力</string>
+    <string name="contact">特殊攻撃力</string>
+    <string name="defenece">特殊防御力</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aaa">aaa</string>
+</resources>
