@@ -44,9 +44,9 @@ class GenerateStatusFragment : Fragment() {
         val hashCodeClass = HashCode()
         val hashCode = hashCodeClass.create()
         val jobNumber = hashCodeClass.generateNumber(hashCode)
-        val character = CharacterFactory.create(jobNumber)
-        Player.Character = character
-        val baseStatus = Status(character.baseStatus).also { it.addHashValue(hashCode) }
+        Player.character = CharacterFactory.create(jobNumber)
+
+        val baseStatus = Status(Player.character.baseStatus).also { it.addHashValue(hashCode) }
         changeStatusLabel(baseStatus.status)
     }
 
