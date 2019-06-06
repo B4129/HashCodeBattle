@@ -17,7 +17,7 @@ class Mage() : ICharacter {
     )
 
 
-    override fun attack() {
+    override fun attack(target: ICharacter) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
