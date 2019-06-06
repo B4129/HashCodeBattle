@@ -9,5 +9,10 @@
                 app:destination="@id/generateStatusFragment"/>
     </fragment>
     <fragment android:id="@+id/generateStatusFragment"
-              android:name="com.example.hashcodebattler.GenerateStatusFragment" android:label="GenerateStatusFragment"/>
+              android:name="com.example.hashcodebattler.GenerateStatusFragment" android:label="GenerateStatusFragment">
+        <action android:id="@+id/action_generateStatusFragment_to_mainPageFragment"
+                app:destination="@id/mainPageFragment"/>
+    </fragment>
+    <fragment android:id="@+id/mainPageFragment" android:name="com.example.hashcodebattler.MainPageFragment"
+              android:label="fragment_main_page" tools:layout="@layout/fragment_main_page"/>
 </navigation>

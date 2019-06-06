@@ -2,13 +2,14 @@ package com.example.hashcodebattler
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.hashcodebattler.Character.CharacterFactory
+import com.example.hashcodebattler.Player.Player
 import com.example.hashcodebattler.Status.IParam
 import com.example.hashcodebattler.Status.Status
 import com.example.hashcodebattler.hashcode.HashCode
@@ -30,21 +31,26 @@ class GenerateStatusFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         button.setOnClickListener { clickGenerateCharacterButton(it) }
+        button2.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_generateStatusFragment_to_mainPageFragment)
+        }
     }
 
+
     private fun clickGenerateCharacterButton(view: View) {
-        if(button2.visibility == INVISIBLE) {
+        if (button2.visibility == INVISIBLE) {
             button2.visibility = VISIBLE
         }
         val hashCodeClass = HashCode()
         val hashCode = hashCodeClass.create()
         val jobNumber = hashCodeClass.generateNumber(hashCode)
         val character = CharacterFactory.create(jobNumber)
+        Player.Character = character
         val baseStatus = Status(character.baseStatus).also { it.addHashValue(hashCode) }
         changeStatusLabel(baseStatus.status)
     }
 
-    private fun changeStatusLabel(statusList: MutableList< IParam>) {
+    private fun changeStatusLabel(statusList: MutableList<IParam>) {
         hpNumberLabel.text = statusList[0].value.toString()
         attackNumberLabel.text = statusList[1].value.toString()
         blockNumberLabel.text = statusList[2].value.toString()

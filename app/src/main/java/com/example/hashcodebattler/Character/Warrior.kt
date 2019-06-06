@@ -1,10 +1,12 @@
 package com.example.hashcodebattler.Character
 
 import com.example.hashcodebattler.Status.*
+import com.example.hashcodebattler.VO.Name
 import java.lang.reflect.Array.set
 
 class Warrior() : ICharacter {
 
+    override val name = Name("ウォリアー")
     override val baseStatus = mutableListOf(
         //合計100(HPは1/2コスト)で振り分ける
         HP(100),
