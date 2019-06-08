@@ -12,8 +12,6 @@ import kotlinx.android.synthetic.main.fragment_main_page.*
 
 class MainPageFragment : Fragment() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -35,9 +33,7 @@ class MainPageFragment : Fragment() {
         defenceValueLabel.text = Player.character.baseStatus[4].value.toString()
         speedValueLabel.text = Player.character.baseStatus[5].value.toString()
 
-        battleButton.setOnClickListener { Navigation.findNavController(it).navigate(R.id.action_titleFragment_to_generateStatusFragment) }
-
-
+        battleButton.setOnClickListener { Navigation.findNavController(it).navigate(R.id.action_mainPageFragment_to_mainPageFragment2) }
     }
 
 }

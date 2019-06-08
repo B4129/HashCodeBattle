@@ -16,7 +16,6 @@ class Mage() : ICharacter {
     )
     override val battleStatus = baseStatus.map{ it }.toMutableList()
 
-
     override fun attack(target: ICharacter) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

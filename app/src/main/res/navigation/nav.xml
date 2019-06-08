@@ -14,5 +14,9 @@
                 app:destination="@id/mainPageFragment"/>
     </fragment>
     <fragment android:id="@+id/mainPageFragment" android:name="com.example.hashcodebattler.MainPageFragment"
+              android:label="fragment_main_page" tools:layout="@layout/fragment_main_page">
+        <action android:id="@+id/action_mainPageFragment_to_mainPageFragment2" app:destination="@id/mainPageFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/mainPageFragment2" android:name="com.example.hashcodebattler.MainPageFragment"
               android:label="fragment_main_page" tools:layout="@layout/fragment_main_page"/>
 </navigation>
