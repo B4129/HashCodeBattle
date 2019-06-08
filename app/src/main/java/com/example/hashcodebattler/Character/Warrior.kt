@@ -16,6 +16,7 @@ class Warrior() : ICharacter {
         Defence(10),
         Speed(5)
     )
+    override val battleStatus = baseStatus.map{ it }.toMutableList()
 
 
     override fun attack(target: ICharacter) {

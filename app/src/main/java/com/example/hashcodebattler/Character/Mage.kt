@@ -4,7 +4,6 @@ import com.example.hashcodebattler.Status.*
 import com.example.hashcodebattler.VO.Name
 
 class Mage() : ICharacter {
-
     override val name = Name("メイジ")
     override val baseStatus = mutableListOf(
         //合計100(HPは1/2コスト)で振り分ける
@@ -15,6 +14,7 @@ class Mage() : ICharacter {
         Defence(10),
         Speed(10)
     )
+    override val battleStatus = baseStatus.map{ it }.toMutableList()
 
 
     override fun attack(target: ICharacter) {

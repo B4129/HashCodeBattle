@@ -8,6 +8,7 @@ interface ICharacter {
 
     val baseStatus:MutableList<IParam>
     val name: Name
+    val battleStatus:MutableList<IParam>
     fun attack(target: ICharacter)
     fun block()
 }

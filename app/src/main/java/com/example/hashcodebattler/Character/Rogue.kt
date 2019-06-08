@@ -15,6 +15,7 @@ class Rogue() : ICharacter {
         Defence(10),
         Speed(25)
     )
+    override val battleStatus = baseStatus.map{ it }.toMutableList()
 
 
     override fun attack(target: ICharacter) {

@@ -15,6 +15,7 @@ class Bat() : ICharacter {
         Defence(10),
         Speed(20)
     )
+    override val battleStatus = baseStatus.map{ it }.toMutableList()
 
 
     override fun attack(target: ICharacter) {
