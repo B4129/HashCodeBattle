@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".Fragment.PartsFragment.BattleButtonsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
-
-</FrameLayout>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragment.PartsFragment.BattleButtonsFragment">
+    <Button
+            android:text="@string/special"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button5" app:layout_constraintStart_toStartOf="@+id/button5"
+    />
+    <Button
+            android:text="@string/normalAttack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button7" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="112dp"
+            android:layout_marginTop="268dp" app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+            android:text="@string/shield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4" app:layout_constraintStart_toEndOf="@+id/button7"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/button7"/>
+    <Button
+            android:text="@string/item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button7" app:layout_constraintStart_toStartOf="@+id/button7"
+    />
+    <Button
+            android:text="@string/skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button6" app:layout_constraintStart_toEndOf="@+id/button5"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button4"/>
+</android.support.constraint.ConstraintLayout>

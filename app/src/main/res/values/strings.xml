@@ -16,7 +16,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="aaa">aaa</string>
+    <string name="normalAttack">通常攻撃</string>
+    <string name="shield">防御</string>
+    <string name="skill">スキル</string>
+    <string name="item">アイテム</string>
+    <string name="special">必殺技</string>
+
     <string name="start">決定</string>
 
     <string name="training">トレーニング</string>
