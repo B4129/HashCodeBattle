@@ -1,4 +1,4 @@
-package com.example.hashcodebattler
+package com.example.hashcodebattler.Fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,6 +9,8 @@ import com.example.hashcodebattler.Battle.Action
 import com.example.hashcodebattler.Battle.Calculate
 import com.example.hashcodebattler.Player.Enemy
 import com.example.hashcodebattler.Player.Player
+import com.example.hashcodebattler.R
+import kotlinx.android.synthetic.main.fragment_battle.*
 import java.lang.Thread.sleep
 
 class BattleFragment : Fragment() {
@@ -24,21 +26,22 @@ class BattleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        while(true){
+        //ループ
             startBattle()
-        }
+
     }
 
     private fun startBattle() {
+        //TODO　: キャラの戦闘時ステータスの初期化が必要
         val player = Player.character
         val enemy = Enemy.character
         //~~が現れた！
         //どうする？
         //ボタン表示
+        fragment2.onStart()
         //ボタンセレクト
-        //ボタン閉じる
-        //攻撃
-        //遅い方の攻撃
+        fragment2.onDestroy()
+
         sleep(1000)
         val actionOrderPair = calculate.actionOrder(player,enemy)
         action.attack("normal",actionOrderPair)

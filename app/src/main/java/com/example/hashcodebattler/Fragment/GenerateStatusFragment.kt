@@ -1,4 +1,4 @@
-package com.example.hashcodebattler
+package com.example.hashcodebattler.Fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.hashcodebattler.Character.CharacterFactory
 import com.example.hashcodebattler.Player.Player
+import com.example.hashcodebattler.R
 import com.example.hashcodebattler.Status.IParam
 import com.example.hashcodebattler.Status.Status
 import com.example.hashcodebattler.hashcode.HashCode

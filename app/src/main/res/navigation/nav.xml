@@ -3,20 +3,20 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav"
             tools:ignore="UnusedNavigation" app:startDestination="@id/titleFragment">
-    <fragment android:id="@+id/titleFragment" android:name="com.example.hashcodebattler.TitleFragment"
+    <fragment android:id="@+id/titleFragment" android:name="com.example.hashcodebattler.Fragment.TitleFragment"
               android:label="fragment_title" tools:layout="@layout/fragment_title">
         <action android:id="@+id/action_titleFragment_to_generateStatusFragment"
                 app:destination="@id/generateStatusFragment"/>
     </fragment>
     <fragment android:id="@+id/generateStatusFragment"
-              android:name="com.example.hashcodebattler.GenerateStatusFragment" android:label="GenerateStatusFragment">
+              android:name="com.example.hashcodebattler.Fragment.GenerateStatusFragment" android:label="GenerateStatusFragment">
         <action android:id="@+id/action_generateStatusFragment_to_mainPageFragment"
                 app:destination="@id/mainPageFragment"/>
     </fragment>
-    <fragment android:id="@+id/mainPageFragment" android:name="com.example.hashcodebattler.MainPageFragment"
+    <fragment android:id="@+id/mainPageFragment" android:name="com.example.hashcodebattler.Fragment.MainPageFragment"
               android:label="fragment_main_page" tools:layout="@layout/fragment_main_page">
-        <action android:id="@+id/action_mainPageFragment_to_mainPageFragment2" app:destination="@id/mainPageFragment2"/>
+        <action android:id="@+id/action_mainPageFragment_to_battleFragment" app:destination="@id/battleFragment"/>
     </fragment>
-    <fragment android:id="@+id/mainPageFragment2" android:name="com.example.hashcodebattler.MainPageFragment"
-              android:label="fragment_main_page" tools:layout="@layout/fragment_main_page"/>
+    <fragment android:id="@+id/battleFragment" android:name="com.example.hashcodebattler.Fragment.BattleFragment"
+              android:label="fragment_battle" tools:layout="@layout/fragment_battle"/>
 </navigation>

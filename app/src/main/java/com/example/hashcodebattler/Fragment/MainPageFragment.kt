@@ -1,4 +1,4 @@
-package com.example.hashcodebattler
+package com.example.hashcodebattler.Fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.hashcodebattler.Player.Player
+import com.example.hashcodebattler.R
 import kotlinx.android.synthetic.main.fragment_main_page.*
 
 
@@ -33,7 +34,7 @@ class MainPageFragment : Fragment() {
         defenceValueLabel.text = Player.character.baseStatus[4].value.toString()
         speedValueLabel.text = Player.character.baseStatus[5].value.toString()
 
-        battleButton.setOnClickListener { Navigation.findNavController(it).navigate(R.id.action_mainPageFragment_to_mainPageFragment2) }
+        battleButton.setOnClickListener { Navigation.findNavController(it).navigate(R.id.action_mainPageFragment_to_battleFragment) }
     }
 
 }
